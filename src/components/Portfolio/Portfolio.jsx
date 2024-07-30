@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
+import { useState } from "react";
 import "./Portfolio.css";
+import slides from "../../data.json";
+// import "bootstrap/js/src/modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import catcare from "../../img/catcare.jpg";
@@ -21,81 +24,84 @@ import summer1 from "../../img/summer1.jpg";
 import summer2 from "../../img/summer2.jpg";
 import gadgets from "../../img/WhatsApp Image 2024-05-05 at 15.51.36_1e78a813.jpg";
 import { themeContext } from "../../Context";
+
 const Portfolio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div className="portfolio" id="portfolio">
-      {/* heading */}
-      <span className="project" style={{ color: darkMode ? "white" : "" }}>
-        Recent Projects
-      </span>
-      <span className="">Portfolio</span>
+    <>
+      <div className="portfolio" id="portfolio">
+        {/* heading */}
+        <span className="project" style={{ color: darkMode ? "white" : "" }}>
+          Recent Projects
+        </span>
+        <span className="">Portfolio</span>
 
-      {/* slider */}
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
+        {/* slider */}
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={6}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            375: {
+              slidesPerView: 1,
+            },
+            400: {
+              slidesPerView: 1,
+            },
+            639: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 1.7,
+            },
+            865: {
+              slidesPerView: 2.92,
+            },
+            1000: {
+              slidesPerView: 2.93,
+            },
+            1500: {
+              slidesPerView: 6,
+            },
+            1700: {
+              slidesPerView: 7,
+            },
+          }}
+          grabCursor={true}
+          className="portfolio-slider"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index + 1}>
+              <img src={slide.img} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div
+        aria-labelledby="exampleModalLabel"
+        className="modal fade "
+        id="imageExample"
+        tabindex="-1"
+        aria-hidden="true"
       >
-        <SwiperSlide>
-          <img src={catcare} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Mary} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={plugg} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={mary} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={vic} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={summer1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={vick} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={baker} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={gadgets} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={summer2} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={kitchen} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bakers} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bud2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bud3} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bud4} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bud5} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={budweiser} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={redeemc} alt="" />
-        </SwiperSlide>
-      </Swiper>
-    </div>
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <img src={catcare} alt="image" className="d-block w-100" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

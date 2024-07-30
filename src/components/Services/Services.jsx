@@ -66,7 +66,7 @@ const Services = () => {
           <Card
             emoji={Humble}
             heading={"Front End Coding"}
-            detail={"proficiency in Html, Css React, Bootstrap"}
+            detail={"proficiency in Html, Css, React, Bootstrap"}
             color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>

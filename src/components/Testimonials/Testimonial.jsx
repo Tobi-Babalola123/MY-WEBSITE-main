@@ -32,7 +32,7 @@ const Testimonial = () => {
     {
       img: profilePic4,
       review:
-        "I’ve been working with Tobi exclusively since 2014 and it has been great! He works fast and consistently delivers high-quality work. He takes my vision and translates it into a professional design that functions for my business goals.",
+        "I’ve been working with Casey exclusively since 2014 and it has been great! He works fast and consistently delivers high-quality work. He takes my vision and translates it into a professional design that functions for my business goals.",
     },
   ];
 

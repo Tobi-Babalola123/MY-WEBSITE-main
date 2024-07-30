@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.4.0",
+    "@emailjs/browser": "^3.12.1",
     "@iconscout/react-unicons": "^1.1.6",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -14,12 +14,13 @@
     "react-router-dom": "^6.23.0",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.6",
-    "swiper": "^8.0.7",
+    "styled-components": "^6.1.12",
+    "swiper": "^7.4.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
