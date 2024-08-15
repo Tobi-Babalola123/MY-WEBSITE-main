@@ -1,3 +1,23 @@
+**About Me**: 
+Hi there I'm Tobi Babalola a frontend developer with (Reactjs), HTML, CSS, bootstrap, and Javascript.
+
+**My Personal Portfolio**
+My personal portfolio is a dynamic portfolio showing my skills and tools to potential clients and employers leveraging the power of reactjs for a seamless and efficient frontend and backend experience. This modern tech stack enables my personal portfolio to deliver a responsive, high-performance user interface.
+
+Website Link :- https://my-website-new1.netlify.app/
+
+![jbgyvg](https://github.com/user-attachments/assets/d8c1650e-66e7-4195-b1be-c3b153309918)
+
+![fvtrgt](https://github.com/user-attachments/assets/e715bb20-b697-4f44-9a68-4a10b812b3d7)
+
+![crrvc](https://github.com/user-attachments/assets/0e68b620-1e14-4d18-aab9-ae92780aa165)
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
