@@ -1,0 +1,54 @@
+.card {
+  margin: 10px; /* Adjust margin between cards */
+  border: 1px solid #ddd; /* Optional: border styling */
+  border-radius: 8px; /* Optional: rounded corners */
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Total height of the card */
+  max-width: 700px; /* Max width of the card */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  flex: 1; /* Ensures image takes half of the height */
+  height: 50%; /* Explicitly sets image to 50% of card height */
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills its container without distortion */
+}
+
+.card-body {
+  flex: 1; /* Takes the remaining 50% of the card height */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; /* Center-align the text */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Pushes buttons to the bottom of the card body */
+}
+
+.btn {
+  width: 48%; /* Adjust button width */
+  padding: 10px;
+  font-size: 1rem;
+}

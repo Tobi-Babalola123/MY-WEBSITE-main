@@ -1,15 +1,6 @@
 import React, { useContext } from "react";
 import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/tboi.png";
-import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
 import FloatinDiv from "../FloatingDiv/FloatingDiv";
-import Github from "../../img/github.png";
-import LinkedIn from "../../img/linkedin.png";
-import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -25,47 +16,43 @@ const Intro = () => {
       {/* left name side */}
       <div className="i-left">
         <div className="i-name">
-          {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Tobi Babalola</span>
-          <span>
-            Frontend Developer with experience in web development and graphic
-            design
-          </span>
+          <span>I'm a Frontend Developer</span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
+          <button className="button i-button">Contact me</button>
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <a target="_blank" href="https://github.com/hotboyer">
-            <img src={Github} alt="" />
+          <a target="_blank" href="https://github.com/Tobi-Babalola123">
+            <img src="/img/github.png" alt="" />
           </a>
           <a
             target="_blank"
             href="https://linkedin.com/in/tobi-babalola-9638372a1"
           >
-            <img src={LinkedIn} alt="" />
+            <img src="/img/linkedin.png" alt="" />
           </a>
           <a
             target="_blank"
             href="https://www.instagram.com/pinnacle_s_lair?igsh=NTc4MTIwNjQ2YQ=="
           >
-            <img src={Instagram} alt="" />
+            <img src="/img/instagram.png" alt="" />
           </a>
         </div>
       </div>
       {/* right image side */}
       <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" className="profile-pic" />
+        <img src="/img/vector1.png" alt="" />
+        <img src="/img/vector2.png" alt="" />
+        <img src="/img/appi.png" alt="" className="profile-pic" />
         {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}
           whileInView={{ left: "-24%" }}
           transition={transition}
-          src={glassesimoji}
+          src="/img/glassesimoji.png"
           alt=""
         />
 
@@ -75,7 +62,7 @@ const Intro = () => {
           transition={transition}
           className="floating-div"
         >
-          <FloatinDiv img={thumbup} text1="Web" text2="Developer" />
+          <FloatinDiv img="/img/thumbup.png" text1="Web" text2="Developer" />
         </motion.div>
 
         {/* animation */}
@@ -86,7 +73,11 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={crown} text1="Graphics Designer" text2="" />
+          <FloatinDiv
+            img="/img/crown.png"
+            text1="Frontend Developer"
+            text2=""
+          />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>

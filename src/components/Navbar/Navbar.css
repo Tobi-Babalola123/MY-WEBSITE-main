@@ -1,3 +1,9 @@
+.resume-link {
+  font-weight: 900;
+  text-decoration: none;
+  color: orange;
+}
+
 .n-wrapper {
   height: 10vh;
   display: flex;

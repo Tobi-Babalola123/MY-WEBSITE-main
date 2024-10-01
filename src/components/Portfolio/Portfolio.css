@@ -6,6 +6,27 @@
   height: 70vh;
 }
 
+.portfolio-card-body p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.portfolio-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 100%;
+  border: 1px solid #ddd; /* Add a light border to make the card visible */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow to enhance visibility */
+  transition: box-shadow 0.3s ease; /* Smooth transition effect for the shadow */
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly increase the shadow on hover for effect */
+}
+
 .modal {
   --bs-modal-zindex: 1055;
   /* display: flex; */
@@ -43,4 +64,60 @@
   width: 19rem;
   filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
   border-radius: 19px;
+}
+
+.projects-section {
+  margin: 20px 0;
+  /* background-color: rgba(255, 255, 255, 0.26); */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 40px; /* Space between grid and swiper */
+}
+
+/* Portfolio Grid Styling */
+/* Portfolio Grid Styling */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column layout on desktop */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens, show only one card per row */
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1-column layout for mobile */
+  }
+}
+
+/* Additional styling for cards if necessary */
+.card {
+  width: 100%;
+  max-width: 500px; /* Set a maximum width for each card */
+}
+
+.projects-section {
+  margin: 40px 0;
+}
+
+.portfolio-slider-section {
+  padding: 20px 0;
+}
+
+.portfolio-slider-section .project-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }

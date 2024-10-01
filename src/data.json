@@ -1,61 +1,30 @@
 [
   {
-    "img": "https://i.ibb.co/tL8yvzH/catcare76.jpg"
+    "img": "/img/frr.png",
+    "title": "Project 1",
+    "description": "CatCare website – Built with React/Bootstrap",
+    "liveLink": "https://rad-gumption-7f55b4.netlify.app/",
+    "codeLink": "https://github.com/Tobi-Babalola123/catcare1"
   },
   {
-    "img": "https://i.ibb.co/x5zSL5c/g3.jpg"
+    "img": "/img/trendtrove.png",
+    "title": "Project 2",
+    "description": "E-commerce website - Built with React/Node.js",
+    "liveLink": "https://66fb469078d6115b7b5301ee--heartfelt-treacle-6063c3.netlify.app/",
+    "codeLink": "https://github.com/Tobi-Babalola123/TrendTrove"
   },
   {
-    "img": "https://i.ibb.co/PT9vfLd/meee.png"
+    "img": "https://i.ibb.co/RjH2Y9M/project2.jpg",
+    "title": "Project 2",
+    "description": "E-commerce website - Built with React/Node.js",
+    "liveLink": "http://example.com/project2",
+    "codeLink": "https://github.com/yourusername/project2"
   },
   {
-    "img": "https://i.ibb.co/7b9QJq7/nsss.png"
-  },
-  {
-    "img": "https://i.ibb.co/195TkT8/bbbb.png"
-  },
-  {
-    "img": "https://i.ibb.co/Nt2sH3x/screencapture-catcare-pr-netlify-app-Docappointment-2024-08-15-16-00-17.png"
-  },
-  {
-    "img": "https://i.ibb.co/wz19kbL/catcare4.jpg"
-  },
-
-  {
-    "img": "https://i.ibb.co/B24JkJx/tyy.png"
-  },
-  {
-    "img": "https://i.ibb.co/TBhyNqN/screencapture-trend-trove-beryl-vercel-app-cart-2024-08-15-16-09-58.png"
-  },
-  {
-    "img": "https://i.ibb.co/hyv1d74/screencapture-trend-trove-beryl-vercel-app-user-yourorders-2024-08-15-16-12-04.png"
-  },
-  {
-    "img": "https://i.ibb.co/kyT5vpd/g1.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/2vGdkSw/g2.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/nzHVhzB/ring.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/305bgS9/summer22.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/RjHrbTf/proff.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/vsk3ngJ/bud5.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/CtBsT8p/bud3.jpg"
-  },
-
-  {
-    "img": "https://i.ibb.co/wpRJVPX/Whats-App-Image-2024-05-05-at-15-51-36-1e78a813.jpg"
-  },
-  {
-    "img": "https://i.ibb.co/gdCgdKb/budweiser-bottle.jpg"
+    "img": "https://i.ibb.co/RjH2Y9M/project2.jpg",
+    "title": "Project 2",
+    "description": "E-commerce website - Built with React/Node.js",
+    "liveLink": "http://example.com/project2",
+    "codeLink": "https://github.com/yourusername/project2"
   }
 ]

@@ -1,21 +1,17 @@
 import React, { useContext } from "react";
 import "./Services.css";
-import Card from "../Card/Card";
-import HeartEmoji from "../../img/heartemoji.png";
-import Glasses from "../../img/glasses.png";
-import Humble from "../../img/humble.png";
+import ServiceCard from "./ServiceCard";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from "./myresumee.pdf";
 
 const Services = () => {
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
-  // transition
+  // transition animation
   const transition = {
-    duration: 1,
+    duration: 1.5, // Slower duration for better effect
     type: "spring",
   };
 
@@ -23,53 +19,65 @@ const Services = () => {
     <div className="services" id="services">
       {/* left side */}
       <div className="awesome">
-        {/* dark mode */}
-        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
-        <span>services</span>
-        <a href={Resume} download>
-          <button className="button s-button">Download CV</button>
-        </a>
+        <span style={{ color: darkMode ? "white" : "" }}>About Me</span>
+        <p className="About-me-details">
+          "I'm Tobi Babalola, a dedicated Front-End Developer passionate about
+          using web technologies to create innovative solutions. My focus is on
+          addressing challenges across diverse industries through the power of
+          technology. As a lifelong learner, I'm constantly expanding my
+          knowledge and skill set to deliver impactful results. Currently, I'm
+          diving into Node.js and Express.js to further enhance my expertise in
+          backend development."
+        </p>
+
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
-      {/* right */}
+
+      {/* right side - cards */}
       <div className="cards">
         {/* first card */}
         <motion.div
-          initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
-          transition={transition}
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.2 }} // Ensures it triggers again when in view
+          transition={{ ...transition, delay: 0.2 }}
         >
-          <Card
-            emoji={HeartEmoji}
-            heading={"Design"}
-            detail={"Canva pro, Adobe Photoshop, Vivid, Lightoom"}
+          <ServiceCard
+            emoji="/img/glasses.png"
+            heading={"Developer"}
+            detail={"HTML, CSS, JavaScript, React, Bootstrap"}
           />
         </motion.div>
+
         {/* second card */}
         <motion.div
-          initial={{ left: "-11rem", top: "12rem" }}
-          whileInView={{ left: "-4rem" }}
-          transition={transition}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.2 }} // Ensures it triggers again when in view
+          transition={{ ...transition, delay: 0.4 }}
         >
-          <Card
-            emoji={Glasses}
-            heading={"Developer"}
-            detail={"Html, Css, bootstrap, React, javascript"}
-          />
-        </motion.div>
-        {/* 3rd */}
-        <motion.div
-          initial={{ top: "19rem", left: "25rem" }}
-          whileInView={{ left: "12rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={Humble}
+          <ServiceCard
+            emoji="/img/humble.png"
             heading={"Front End Coding"}
-            detail={"proficiency in Html, Css, React, Bootstrap"}
+            detail={"Proficiency in HTML, CSS, React, Bootstrap"}
             color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
+
+        {/* third card */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }} // Ensures it triggers again when in view
+          transition={{ ...transition, delay: 0.6 }}
+        >
+          <ServiceCard
+            emoji="/img/heartemoji.png"
+            heading={"Design"}
+            detail={"Canva Pro, Adobe Photoshop, Vivid, Lightroom"}
+          />
+        </motion.div>
+
         <div
           className="blur s-blur2"
           style={{ background: "var(--purple)" }}

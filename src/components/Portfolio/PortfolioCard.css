@@ -1,0 +1,36 @@
+.portfolio-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px; /* Reduced padding */
+  margin: 10px; /* Reduced margin */
+  width: 100%; /* Adjust width as needed */
+}
+
+.portfolio-card-img {
+  width: 100%;
+  height: 250px; /* Set a specific height to control the image size */
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+.portfolio-card-body {
+  text-align: center;
+  padding: 10px 0; /* Added padding to reduce space */
+}
+
+.portfolio-card-body h3 {
+  margin: 5px 0; /* Reduced margins to minimize height */
+  font-size: 1.2rem; /* Adjust font size if needed */
+}
+
+.portfolio-card-body p {
+  margin: 5px 0; /* Reduced margins around the description */
+  font-size: 0.9rem; /* Optional: Adjust text size to save space */
+}
+
+.portfolio-card-body a {
+  margin-right: 5px; /* Reduced margin between buttons */
+  text-decoration: none;
+  padding: 8px 12px; /* Adjust button padding to make them smaller */
+  font-size: 0.9rem; /* Optional: Smaller font size for buttons */
+}

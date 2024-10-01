@@ -1,5 +1,5 @@
 #works {
-padding: 0 0 18rem 0;
+  padding: 0 0 5rem 0;
 }
 .works {
   padding: 0 3rem 0 3rem;
@@ -11,23 +11,24 @@ padding: 0 0 18rem 0;
   align-items: center;
 }
 /* left side */
-.awesome {
+.awesome-2 {
   display: flex;
   flex-direction: column;
   position: relative;
+  /* width: 0; */
 }
 
-.awesome > :nth-child(1) {
+.awesome-2 > :nth-child(1) {
   color: var(--black);
   font-size: 2.5rem;
   font-weight: bold;
 }
-.awesome > :nth-child(2) {
+.awesome-2 > :nth-child(2) {
   color: var(--orange);
-  font-size: 2.5rem;
+  font-size: 1.7rem !important;
   font-weight: bold;
 }
-.awesome > :nth-child(3) {
+.awesome-2 > :nth-child(3) {
   color: var(--gray);
   font-size: 14px;
   margin-top: 1rem;
@@ -41,6 +42,7 @@ padding: 0 0 18rem 0;
 /* right side */
 .w-right {
   position: relative;
+  left: -2rem;
 }
 
 .w-mainCircle {
@@ -82,19 +84,30 @@ padding: 0 0 18rem 0;
   width: 6rem;
   height: 6rem;
   position: absolute;
-  border-radius: 100%;
-  border: 5px solid #ebebeb;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: "none";
-  box-shadow: var(--smboxShadow);
-  background: white;
 }
 
-.tools-circle{
-  height: 12rem;
+.tools-circle {
+  height: 9.5rem;
+  margin-left: -2rem;
+  margin-top: 3.7rem;
 }
+
+.css {
+  height: 9.5rem;
+  margin-left: -2rem;
+  margin-top: 3.7rem;
+  margin-bottom: 4rem;
+}
+
+.react {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
 .w-secCircle > img {
   transform: scale(0.6);
 }
@@ -129,14 +142,13 @@ padding: 0 0 18rem 0;
   .w-right {
     display: flex;
     align-items: flex-start;
-    justify-content:start;
+    justify-content: flex-start;
     transform: scale(0.7);
   }
-  .w-mainCircle{
+  .w-mainCircle {
     position: static;
   }
-  .w-backCircle{
-    left: 8rem!important;
+  .w-backCircle {
+    left: 8rem !important;
   }
-
 }

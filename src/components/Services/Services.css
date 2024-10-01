@@ -1,81 +1,107 @@
 .services {
-  padding: 0 3rem 0 3rem;
+  padding: 0 3rem;
   display: flex;
-  height: 30rem;
-  margin-bottom: 8rem;
-  margin-top: 9rem;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
   margin-bottom: 13rem;
-  /* scroll view */
   padding-top: 3rem;
 }
-/* left side */
+
+/* Left side - About Me section */
 .awesome {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center content on mobile */
   position: relative;
-  /* gap: 20px; */
+}
+
+.awesome span {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+/* Target the span with 'About Me' to apply the underline */
+.awesome span:first-of-type::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%; /* Set to 100% to match the heading text */
+  height: 6px;
+  background-color: orange;
 }
 
 .awesome > :nth-child(1) {
   color: var(--black);
   font-size: 2.5rem;
   font-weight: bold;
+  text-align: center; /* Keep centered by default */
 }
+
 .awesome > :nth-child(2) {
-  color: var(--orange);
-  font-size: 2.5rem;
-  font-weight: bold;
+  color: black;
+  font-size: 1rem !important;
+  margin-top: 1rem;
 }
+
 .awesome > :nth-child(3) {
   color: var(--gray);
   font-size: 14px;
   margin-top: 1rem;
 }
-.s-button {
-  width: 8rem;
-  height: 2rem;
-  /* margin-top: 1rem; */
-  font-size: 15px !important;
-}
-/* right sided */
+
 .cards {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* Ensure consistent spacing between cards */
+  margin-top: 2rem;
 }
+
 .cards > * {
-  position: absolute;
+  position: relative;
+  height: auto;
+  flex-grow: 1; /* Allow cards to scale consistently */
+  min-width: 10rem; /* Set a minimum width for better scaling */
+  max-width: 12rem;
 }
 
-.card span:nth-of-type(2) {
-  color: var(--gray);
-  font-size: 13px !important;
-}
-
-/* blur */
-.s-blur2 {
-  left: 14rem;
-  top: 8rem;
-}
-
-.s-blur1 {
-  top: 13rem;
-  left: -18rem;
-}
-
-@media screen and (max-width: 480px) {
-  .services {
-    margin-top: 0;
-    flex-direction: column;
-    gap: 5rem;
-    height: 66rem;
-    padding: 0;
+/* Move the "About Me" heading to the left on desktop (min-width: 768px) */
+@media screen and (min-width: 768px) {
+  .awesome {
+    align-items: flex-start; /* Align content to the left on larger screens */
   }
 
+  .awesome > :nth-child(1) {
+    text-align: left; /* Move "About Me" to the left */
+  }
+}
+
+/* Keep the heading centered on mobile */
+@media screen and (max-width: 768px) {
+  .awesome > :nth-child(1) {
+    text-align: center;
+  }
+}
+
+/* Ensure proper motion for desktop view */
+@media screen and (min-width: 768px) {
   .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 17rem;
+    justify-content: center;
+    flex-direction: row;
   }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 480px) {
+  .cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .cards > * {
-    position: static;
+    width: 100%; /* Ensure all cards take equal width */
   }
 }
